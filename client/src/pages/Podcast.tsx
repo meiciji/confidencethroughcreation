@@ -391,10 +391,12 @@ const Podcast = () => {
                 stories of young women changing the world through technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3">
-                  <Headphones className="h-5 w-5 mr-2" />
-                  Subscribe on Spotify
-                </Button>
+                <a href="https://open.spotify.com/show/38e19lpZmZM4KlN98c9Ism?si=383d5d41d7cf4d4f">
+                  <Button className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3">
+                    <Headphones className="h-5 w-5 mr-2" />
+                    Subscribe on Spotify
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   className="border-sage-300 text-sage-700 hover:bg-sage-50 px-8 py-3"
