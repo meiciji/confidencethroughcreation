@@ -24,7 +24,7 @@ const Podcast = () => {
     if (metaDescription) {
       metaDescription.setAttribute(
         "content",
-        "Listen to Confidence Conversations, our podcast featuring inspiring stories from young women leaders, entrepreneurs, and change-makers sharing their journeys in technology and creativity.",
+        "Listen to The Confident Creator, our podcast featuring inspiring stories from young women leaders, entrepreneurs, and change-makers sharing their journeys in technology and creativity.",
       );
     }
   }, []);
@@ -143,9 +143,9 @@ const Podcast = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-sage-900 mb-6">
-              Confidence{" "}
+              The Confident{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-sage-600 to-mint-600">
-                Conversations
+                Creator
               </span>
             </h1>
 
@@ -224,10 +224,12 @@ const Podcast = () => {
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <a href={episode.audioUrl} target="_blank" rel="noopener noreferrer">
-                          <Button
-                            className="bg-sage-600 hover:bg-sage-700 text-white"
-                          >
+                        <a
+                          href={episode.audioUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Button className="bg-sage-600 hover:bg-sage-700 text-white">
                             <Play className="h-4 w-4 mr-2" />
                             Play Episode
                           </Button>
@@ -314,7 +316,11 @@ const Podcast = () => {
                         </div>
 
                         <div className="flex items-center gap-2">
-                          <a href={episode.audioUrl} target="_blank" rel="noopener noreferrer">
+                          <a
+                            href={episode.audioUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             <Button
                               size="sm"
                               className="bg-sage-600 hover:bg-sage-700 text-white text-xs px-3 py-1"
@@ -380,7 +386,7 @@ const Podcast = () => {
                 Never Miss an Episode
               </h2>
               <p className="text-lg text-sage-700 mb-8">
-                Subscribe to Confidence Conversations and get notified when new
+                Subscribe to The Confident Creator and get notified when new
                 episodes drop. Join thousands of listeners who are inspired by
                 stories of young women changing the world through technology.
               </p>
