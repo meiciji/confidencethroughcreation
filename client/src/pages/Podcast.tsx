@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Play,
-  Pause,
   Calendar,
   Clock,
   Download,
@@ -14,7 +13,7 @@ import {
   Headphones,
   Users,
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 const Podcast = () => {
   useEffect(() => {
@@ -30,21 +29,21 @@ const Podcast = () => {
     }
   }, []);
 
-  const [playingEpisode, setPlayingEpisode] = useState<number | null>(null);
-
   const episodes = [
     {
       id: 1,
-      title: "Breaking Barriers: Girls in Tech Leadership",
+      title:
+        "The Courage to Pivot: Meagan Skerchock’s Journey from Film to Startups",
       description:
-        "A powerful conversation with three young women who started their own tech companies before turning 20. We explore their journeys, challenges, and advice for the next generation.",
-      host: "Sarah Chen",
-      guest: "Maya Patel, Zoe Williams, Alex Rodriguez",
-      duration: "42 min",
-      publishDate: "December 15, 2024",
-      category: "Leadership",
+        "In this episode of the Confidence Through Creation podcast, host Mei dives into her transformative journey from the film industry to founding her innovative EdTech company, Perspectiv. Discover how Meagan navigated the challenges of entrepreneurship, the pivotal role of community and relationships, and her vision for Perspectiv as a groundbreaking tool for career exploration and community building. With candid insights on trusting intuition, embracing risks, and learning from failures, Meagan's story is a testament to resilience and the power of following one's passion.",
+      host: "Mei Tham",
+      guest: "Meagan Skerchock",
+      duration: "39 min",
+      publishDate: "October 16, 2025",
+      category: "Taking a Risk",
       plays: "2.3k",
-      audioUrl: "#",
+      audioUrl:
+        "https://open.spotify.com/episode/5VC6rjDOhxWqNl6FDVbVuv?si=Dq8Aug2BSfKyLZLujJxPtg",
       transcript: true,
       featured: true,
     },
@@ -110,15 +109,6 @@ const Podcast = () => {
     },
   ];
 
-  const categories = [
-    "All",
-    "Leadership",
-    "Success Stories",
-    "Tech Talk",
-    "Community",
-    "Mental Health",
-    "Family",
-  ];
   const hosts = [
     {
       name: "Mei Tham",
@@ -136,10 +126,6 @@ const Podcast = () => {
       bio: "I'm a high school sophomore from North Dakota. I love playing the bassoon and meeting new people, and I’m always excited to create meaningful connections.",
     },
   ];
-
-  const togglePlay = (episodeId: number) => {
-    setPlayingEpisode(playingEpisode === episodeId ? null : episodeId);
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-cream-300 to-sage-100">
@@ -171,10 +157,12 @@ const Podcast = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3">
-                <Headphones className="h-5 w-5 mr-2" />
-                Listen on Spotify
-              </Button>
+              <a href="https://open.spotify.com/show/38e19lpZmZM4KlN98c9Ism?si=383d5d41d7cf4d4f">
+                <Button className="bg-sage-600 hover:bg-sage-700 text-white px-8 py-3">
+                  <Headphones className="h-5 w-5 mr-2" />
+                  Listen on Spotify
+                </Button>
+              </a>
               <Button
                 variant="outline"
                 className="border-sage-300 text-sage-700 hover:bg-sage-50 px-8 py-3"
@@ -183,65 +171,6 @@ const Podcast = () => {
                 Subscribe on Apple Podcasts
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <Card className="bg-white/90 backdrop-blur-sm border-sage-200 text-center">
-              <CardContent className="p-6">
-                <div className="text-2xl font-bold text-sage-900 mb-1">25+</div>
-                <div className="text-sage-600 text-sm">Episodes</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/90 backdrop-blur-sm border-sage-200 text-center">
-              <CardContent className="p-6">
-                <div className="text-2xl font-bold text-sage-900 mb-1">
-                  50k+
-                </div>
-                <div className="text-sage-600 text-sm">Monthly Listeners</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/90 backdrop-blur-sm border-sage-200 text-center">
-              <CardContent className="p-6">
-                <div className="text-2xl font-bold text-sage-900 mb-1">
-                  100+
-                </div>
-                <div className="text-sage-600 text-sm">Featured Guests</div>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/90 backdrop-blur-sm border-sage-200 text-center">
-              <CardContent className="p-6">
-                <div className="text-2xl font-bold text-sage-900 mb-1">
-                  4.8★
-                </div>
-                <div className="text-sage-600 text-sm">Average Rating</div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Category Filter */}
-      <section className="pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category, index) => (
-              <Button
-                key={index}
-                variant={index === 0 ? "default" : "outline"}
-                className={`${
-                  index === 0
-                    ? "bg-sage-600 hover:bg-sage-700 text-white"
-                    : "border-sage-300 text-sage-700 hover:bg-sage-50"
-                } transition-all duration-200`}
-              >
-                {category}
-              </Button>
-            ))}
           </div>
         </div>
       </section>
@@ -295,24 +224,14 @@ const Podcast = () => {
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <Button
-                          onClick={() => togglePlay(episode.id)}
-                          className="bg-sage-600 hover:bg-sage-700 text-white"
-                        >
-                          {playingEpisode === episode.id ? (
-                            <Pause className="h-4 w-4 mr-2" />
-                          ) : (
+                        <a href={episode.audioUrl} target="_blank" rel="noopener noreferrer">
+                          <Button
+                            className="bg-sage-600 hover:bg-sage-700 text-white"
+                          >
                             <Play className="h-4 w-4 mr-2" />
-                          )}
-                          {playingEpisode === episode.id ? "Pause" : "Play"}
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="border-sage-300 text-sage-700"
-                        >
-                          <Download className="h-4 w-4 mr-2" />
-                          Download
-                        </Button>
+                            Play Episode
+                          </Button>
+                        </a>
                         <Button
                           variant="outline"
                           className="border-sage-300 text-sage-700"
@@ -328,9 +247,6 @@ const Podcast = () => {
                         <Mic className="h-16 w-16 text-sage-700 mx-auto mb-4" />
                         <div className="text-sage-700 font-semibold">
                           Episode {episode.id}
-                        </div>
-                        <div className="text-sage-600 text-sm">
-                          {episode.plays} plays
                         </div>
                       </div>
                     </div>
@@ -393,23 +309,20 @@ const Podcast = () => {
                           </div>
                           <div className="flex items-center mt-1">
                             <Calendar className="h-3 w-3 mr-1" />
-                            {episode.publishDate} • {episode.plays} plays
+                            {episode.publishDate}
                           </div>
                         </div>
 
                         <div className="flex items-center gap-2">
-                          <Button
-                            size="sm"
-                            onClick={() => togglePlay(episode.id)}
-                            className="bg-sage-600 hover:bg-sage-700 text-white text-xs px-3 py-1"
-                          >
-                            {playingEpisode === episode.id ? (
-                              <Pause className="h-3 w-3 mr-1" />
-                            ) : (
+                          <a href={episode.audioUrl} target="_blank" rel="noopener noreferrer">
+                            <Button
+                              size="sm"
+                              className="bg-sage-600 hover:bg-sage-700 text-white text-xs px-3 py-1"
+                            >
                               <Play className="h-3 w-3 mr-1" />
-                            )}
-                            {playingEpisode === episode.id ? "Pause" : "Play"}
-                          </Button>
+                              Play
+                            </Button>
+                          </a>
                           <Button
                             size="sm"
                             variant="outline"
