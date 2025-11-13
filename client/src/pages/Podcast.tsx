@@ -44,6 +44,7 @@ const Podcast = () => {
       plays: "2.3k",
       audioUrl:
         "https://open.spotify.com/episode/5VC6rjDOhxWqNl6FDVbVuv?si=Dq8Aug2BSfKyLZLujJxPtg",
+      imageUrl: "/mia.png",
       transcript: true,
       featured: true,
     },
@@ -52,15 +53,16 @@ const Podcast = () => {
       title:
         "Breaking Stigmas: Kiana Kay's Story of Becoming a Nonprofit Founder",
       description:
-        "Follow Aisha's incredible story of building and launching her environmental app that now has over 10,000 downloads. Learn about the technical challenges and business lessons.",
-      host: "Maria Santos",
-      guest: "Aisha Johnson",
-      duration: "35 min",
-      publishDate: "December 8, 2024",
+        "Tune into this honest and empowering deep dive into what it really takes to turn personal challenges into purpose. In this episode, Kiana opens up about her journey from confronting social stigmas around mental health to building a nonprofit that gives others a voice. Through raw reflection and candid storytelling, she shares the obstacles she faced, the misconceptions she fought to break, and the moments that fueled her mission to create lasting change around the world.",
+      host: "Mei Tham",
+      guest: "Kiana Kay",
+      duration: "16 min",
+      publishDate: "November 8, 2025",
       category: "Success Stories",
-      plays: "1.8k",
+      plays: "",
       audioUrl:
         "https://open.spotify.com/episode/4u7vUB1j4qBbKDgCQVmPR9?si=9da4e788f7cf4d03",
+      imageUrl: "/healing_hearts.png",
       transcript: true,
       featured: false,
     },
@@ -76,6 +78,7 @@ const Podcast = () => {
       category: "Tech Talk",
       plays: "1.5k",
       audioUrl: "#",
+      imageUrl: "/steminist.png",
       transcript: true,
       featured: false,
     },
@@ -91,6 +94,7 @@ const Podcast = () => {
       category: "Community",
       plays: "1.2k",
       audioUrl: "#",
+      imageUrl: "/little-lights.png",
       transcript: true,
       featured: false,
     },
@@ -106,6 +110,7 @@ const Podcast = () => {
       category: "Mental Health",
       plays: "2.1k",
       audioUrl: "#",
+      imageUrl: "/pulse-project.png",
       transcript: true,
       featured: false,
     },
@@ -246,13 +251,12 @@ const Podcast = () => {
                       </div>
                     </div>
 
-                    <div className="bg-gradient-to-br from-sage-300 to-mint-300 rounded-lg h-64 flex items-center justify-center">
-                      <div className="text-center">
-                        <Mic className="h-16 w-16 text-sage-700 mx-auto mb-4" />
-                        <div className="text-sage-700 font-semibold">
-                          Episode {episode.id}
-                        </div>
-                      </div>
+                    <div className="rounded-lg h-64 overflow-hidden">
+                      <img
+                        src={episode.imageUrl}
+                        alt={`Episode ${episode.id} - ${episode.title}`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </CardContent>
@@ -279,8 +283,12 @@ const Podcast = () => {
                 >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="bg-gradient-to-br from-sage-300 to-mint-300 rounded-lg w-20 h-20 flex items-center justify-center flex-shrink-0">
-                        <Mic className="h-8 w-8 text-sage-700" />
+                      <div className="rounded-lg w-20 h-20 overflow-hidden flex-shrink-0">
+                        <img
+                          src={episode.imageUrl}
+                          alt={`Episode ${episode.id}`}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
 
                       <div className="flex-1 min-w-0">
