@@ -44,7 +44,7 @@ const Podcast = () => {
       plays: "2.3k",
       audioUrl:
         "https://open.spotify.com/episode/5VC6rjDOhxWqNl6FDVbVuv?si=Dq8Aug2BSfKyLZLujJxPtg",
-      imageUrl: "/mia.png",
+      imageUrl: "/PODCAST.png",
       transcript: true,
       featured: true,
     },
