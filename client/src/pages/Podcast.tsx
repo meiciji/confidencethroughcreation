@@ -49,7 +49,8 @@ const Podcast = () => {
     },
     {
       id: 2,
-      title: "From Idea to App Store: A Teen Developer's Journey",
+      title:
+        "Breaking Stigmas: Kiana Kay's Story of Becoming a Nonprofit Founder",
       description:
         "Follow Aisha's incredible story of building and launching her environmental app that now has over 10,000 downloads. Learn about the technical challenges and business lessons.",
       host: "Maria Santos",
@@ -58,7 +59,8 @@ const Podcast = () => {
       publishDate: "December 8, 2024",
       category: "Success Stories",
       plays: "1.8k",
-      audioUrl: "#",
+      audioUrl:
+        "https://open.spotify.com/episode/4u7vUB1j4qBbKDgCQVmPR9?si=9da4e788f7cf4d03",
       transcript: true,
       featured: false,
     },
