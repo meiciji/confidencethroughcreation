@@ -8,7 +8,6 @@ import {
   Calendar,
   Clock,
   Download,
-  Share2,
   Mic,
   Headphones,
   Users,
@@ -62,7 +61,7 @@ const Podcast = () => {
       plays: "",
       audioUrl:
         "https://open.spotify.com/episode/4u7vUB1j4qBbKDgCQVmPR9?si=9da4e788f7cf4d03",
-      imageUrl: "/healing_hearts.png",
+      imageUrl: "/sunday.png",
       transcript: true,
       featured: false,
     },
@@ -241,13 +240,6 @@ const Podcast = () => {
                             Play Episode
                           </Button>
                         </a>
-                        <Button
-                          variant="outline"
-                          className="border-sage-300 text-sage-700"
-                        >
-                          <Share2 className="h-4 w-4 mr-2" />
-                          Share
-                        </Button>
                       </div>
                     </div>
 
@@ -339,14 +331,6 @@ const Podcast = () => {
                               Play
                             </Button>
                           </a>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            className="border-sage-300 text-sage-700 text-xs px-3 py-1"
-                          >
-                            <Share2 className="h-3 w-3 mr-1" />
-                            Share
-                          </Button>
                         </div>
                       </div>
                     </div>
