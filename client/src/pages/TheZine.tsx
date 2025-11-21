@@ -51,7 +51,7 @@ const TheZine = () => {
       gradientFrom: "from-sage-300",
       gradientTo: "to-soft-300",
       image: "/financial.png",
-      link: "https://www.financialboost.org",
+      link: "https://www.instagram.com/financeboostz/",
     },
     {
       title: "Dreams to Business Hungary",
@@ -72,7 +72,7 @@ const TheZine = () => {
       link: "https://www.instagram.com/dtb.hungary/",
     },
     {
-      title: "Steminist Study Hub",
+      title: "She Desires to be MD",
       creator: "Oreoluwa, 17",
       description:
         "Platform for women in STEM with access to study materials, resources, and mentors.",
@@ -86,8 +86,8 @@ const TheZine = () => {
       impact: "Supporting women in STEM education and careers",
       gradientFrom: "from-sage-400",
       gradientTo: "to-mint-300",
-      image: "/steminist.png",
-      link: "https://www.instagram.com/shedesirestobemd/",
+      image: "/shedesires.png",
+      link: "https://shedesirestobemed.weebly.com/",
     },
     {
       title: "NeuroRest",
